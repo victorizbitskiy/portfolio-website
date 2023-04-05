@@ -1,0 +1,28 @@
+{
+  "name": "portfolio-website",
+  "version": "1.0.0",
+  "description": "This is a portfolio-website",
+  "scripts": {
+    "dev": "next dev -H 0.0.0.0",
+    "buils": "next-build",
+    "prettier": "prettier -write .",
+    "lint": "next lint"
+  },
+  "keywords": [],
+  "author": "Victor Izbitskiy<victor.izbitskiy@yandex.ru>",
+  "license": "ISC",
+  "dependencies": {
+    "@chakra-ui/react": "^2.5.5",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "framer-motion": "^10.10.0",
+    "next": "^13.2.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.37.0",
+    "eslint-config-next": "^13.2.4",
+    "prettier": "^2.8.7"
+  }
+}
