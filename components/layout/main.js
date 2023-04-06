@@ -1,8 +1,7 @@
 import { Box, Container } from "@chakra-ui/react";
 import Head from "next/head";
 
-
-const Main = ({ children, router }) => {
+const Main = ({ children}) => {
   return (
     <Box as="main" pb={8}>
       <Head>
@@ -13,6 +12,7 @@ const Main = ({ children, router }) => {
           {children}
         </Container>
       </Head>
+      
     </Box>
   );
 };
