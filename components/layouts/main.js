@@ -1,18 +1,20 @@
 import { Box, Container } from "@chakra-ui/react";
+import Navbar from '../layouts/navbar'
 import Head from "next/head";
 
-const Main = ({ children}) => {
+const Main = ({ children, router }) => {
   return (
     <Box as="main" pb={8}>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Victor Izbitskiy - Homepage</title>
-
-        <Container maxW={"container.md"} pt={14}>
-          {children}
-        </Container>
       </Head>
-      
+      {console.log(router)}
+      <Navbar path='/' />
+
+      <Container maxW={"container.md"} pt={14}>
+        {children}
+      </Container>
     </Box>
   );
 };
