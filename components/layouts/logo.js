@@ -1,31 +1,35 @@
 import Link from 'next/link'
+import FireflyIcon from '../icons/firefly'
 import styled from '@emotion/styled'
-import { Image, Text, useColorModeValue } from '@chakra-ui/react'
+import {Text, useColorModeValue } from '@chakra-ui/react'
 
 const LogoBox = styled.span`
   font-weight: bold;
-  font-size:18px;
+  font-size: 18px;
   display: inline-flex;
   align-items: center;
   height: 30px;
   line-height: 20px;
   padding: 10px;
 
-  &:hover img {
-    transform: rotate(20deg);
+  > svg {
+    transition: 200ms ease;
+  }
+
+  &:hover > svg {
+    transform: rotate(0deg);
   }
 `
 const Logo = () => {
-  const footPrintImg = `/images/footprint${useColorModeValue('', '-dark')}.png`
 
   return (
     <Link href="/">
       <LogoBox>
-        <Image src={footPrintImg} width={20} height={20} alt="logo" />
+        <FireflyIcon />
         <Text
           color={useColorModeValue('gray.800', 'whiteAlpha.900')}
           fontFamily='M PLUS Rounded 1c'
-          ml={3}
+          ml={0}
         >
           Victor Izbitskiy
         </Text>
