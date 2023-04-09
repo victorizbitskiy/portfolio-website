@@ -5,7 +5,7 @@ const Page = () => {
     <Container>
       <Box
         borderRadius="7px"
-        bg="red" 
+        bg="red"
         p={3}
         mb={6}
         align="center"
