@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import FireflyIcon from '../icons/firefly'
+import FireflyIcon from './icons/firefly'
 import styled from '@emotion/styled'
 import {Text, useColorModeValue } from '@chakra-ui/react'
 
@@ -17,7 +17,7 @@ const LogoBox = styled.span`
   }
 
   &:hover > svg {
-    transform: rotate(0deg);
+    transform: rotate(0);
   }
 `
 const Logo = () => {

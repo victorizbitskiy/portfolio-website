@@ -2,8 +2,10 @@ const FireflyIcon = (props) => (
   <svg
     width={28}
     height={29}
+    className="w-5 inline-block transition-transform group-hover:rotate-[20deg]"
     viewBox="0 0 600 600"
     transform="rotate(-20)"
+    fill="currentColor"
     {...props}
   >
     <g>
