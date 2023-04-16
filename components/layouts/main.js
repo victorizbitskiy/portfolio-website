@@ -1,6 +1,7 @@
 import { Box, Container } from "@chakra-ui/react";
 import Navbar from '../navbar'
 import Head from "next/head";
+import VocelFireflies from "../voxel-fireflies";
 
 const Main = ({ children, router }) => {
   return (
@@ -13,6 +14,7 @@ const Main = ({ children, router }) => {
       <Navbar path={router.asPath} />
 
       <Container maxW={"container.md"} pt={14}>
+      <VocelFireflies />
         {children}
       </Container>
     </Box>
