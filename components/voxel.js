@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react"
-import { FirefliesContainer, FirefliesSpinner } from "./voxel-fireflies-loader"
+import { VoxelContainer, VoxelSpinner } from "./voxel-loader"
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { loadGLTFModel } from '../lib/model'
 import * as THREE from 'three'
@@ -8,11 +8,11 @@ function easeOutCirc(x) {
   return Math.sqrt(1 - Math.pow(x - 1, 4))
 }
 
-const VoxelFireflies = () => {
+const Voxel = () => {
   const refContainer = useRef()
   const [loading, setLoading] = useState(true)
   const refRenderer = useRef()
-  const urlFirefliesGLB = 'robot_shark.glb'
+  const urlGLB = 'wizard.glb'
 
   const handleWindowResize = useCallback(() => {
     const { current: renderer } = refRenderer
@@ -43,11 +43,11 @@ const VoxelFireflies = () => {
 
       const scene = new THREE.Scene()
       const target = new THREE.Vector3(-0.5, 1.2, 0)
-      const initialCameraPosition = new THREE.Vector3(20 * Math.sin(0.2 * Math.PI), 10, 20 * Math.cos(0.2 * Math.PI))
+      const initialCameraPosition = new THREE.Vector3(200 * Math.sin(0.1 * Math.PI), 20, 200 * Math.cos(0.1 * Math.PI))
 
       // 640 -> 240
       // 8   -> 6
-      const scale = scH * 0.015 + 4.8
+      const scale = scH * 0.09 + 4.8
       const camera = new THREE.OrthographicCamera(
         -scale,
         scale,
@@ -66,7 +66,7 @@ const VoxelFireflies = () => {
       controls.autoRotate = true
       controls.target = target
 
-      loadGLTFModel(scene, urlFirefliesGLB, {
+      loadGLTFModel(scene, urlGLB, {
         receiveShadow: false,
         castShadow: false
       }).then(() => {
@@ -114,9 +114,9 @@ const VoxelFireflies = () => {
   }, [handleWindowResize])
 
   return (
-    <FirefliesContainer ref={refContainer}>
-      {loading && <FirefliesSpinner />}
-    </FirefliesContainer>
+    <VoxelContainer ref={refContainer}>
+      {loading && <VoxelSpinner />}
+    </VoxelContainer>
   )
 }
-export default VoxelFireflies
+export default Voxel

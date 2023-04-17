@@ -1,7 +1,7 @@
 import { forwardRef } from "react";
 import { Spinner, Box } from "@chakra-ui/react";
 
-export const FirefliesSpinner = () => (
+export const VoxelSpinner = () => (
   <Spinner
     size="xl"
     position="absolute"
@@ -13,10 +13,10 @@ export const FirefliesSpinner = () => (
 )
 
 // eslint-disable-next-line react/display-name
-export const FirefliesContainer = forwardRef(({ children }, ref) => (
+export const VoxelContainer = forwardRef(({ children }, ref) => (
   <Box
     ref={ref}
-    className="voxel-fireflies"
+    className="voxel"
     m="auto"
     mt={['-20px', "-60px", '-120px']}
     mb={['-40px', "-140px", '-200px']}
@@ -30,9 +30,9 @@ export const FirefliesContainer = forwardRef(({ children }, ref) => (
 
 const Loader = () => {
   return (
-    <FirefliesContainer>
-      <FirefliesSpinner />
-    </FirefliesContainer>
+    <VoxelContainer>
+      <VoxelSpinner />
+    </VoxelContainer>
   )
 }
 
