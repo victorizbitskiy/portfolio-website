@@ -61,7 +61,8 @@ const Page = () => {
               href="/works"
               scroll={false}
               rightIcon={<ChevronRightIcon />}
-              colorScheme="teal"
+              // colorScheme="cyan"
+              bgColor="#637988"
             >
               My portfolio
             </Button>
