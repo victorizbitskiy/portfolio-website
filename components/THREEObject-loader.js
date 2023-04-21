@@ -18,10 +18,10 @@ export const THREEObjectContainer = forwardRef(({ children }, ref) => (
     ref={ref}
     className="THREEObject"
     m="auto"
-    mt={['-20px', "-60px", '-120px']}
-    mb={['-40px', "-140px", '-270px']}
-    w={[280, 480, 640]}
-    h={[280, 480, 640]}
+    mt={['10px', "-60px", '-120px']}
+    mb={['-100px', "-140px", '-270px']}
+    w={[350, 480, 640]}
+    h={[350, 480, 640]}
     position="relative"
   >
     {children}

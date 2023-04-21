@@ -42,19 +42,22 @@ const THREEObject = () => {
       refRenderer.current = renderer
 
       const scene = new THREE.Scene()
-      const target = new THREE.Vector3(-0.5, 10, 0)
-      const initialCameraPosition = new THREE.Vector3(200 * Math.sin(0.1 * Math.PI), 200, 200 * Math.cos(0.1 * Math.PI))
+      const target = new THREE.Vector3(-0.5, 1.2, 0)
+      const initialCameraPosition = new THREE.Vector3(
+        200 * Math.sin(0.1 * Math.PI), 
+        10, 
+        200 * Math.cos(0.1 * Math.PI))
 
       // 640 -> 240
       // 8   -> 6
-      const scale = scH * 0.52
+      const scale = scH * 0.6 + 4.8
       const camera = new THREE.OrthographicCamera(
         -scale,
         scale,
         scale,
         -scale,
         0.01,
-        5000
+        50000
       )
       camera.position.copy(initialCameraPosition)
       camera.lookAt(target)
