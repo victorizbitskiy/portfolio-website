@@ -62,7 +62,7 @@ const Page = () => {
               scroll={false}
               rightIcon={<ChevronRightIcon />}
               // colorScheme="cyan"
-              bgColor="#637988"
+              bgColor="#7f9eaa"
             >
               My portfolio
             </Button>
