@@ -17,7 +17,7 @@ const Page = () => {
           mb={6}
           align="center"
         >
-          Hello, I&apos;m a full-stack developer based in Russia
+          Hi there! Welcome to my web page!
         </Box>
 
         <Box display={{ md: "flex" }}>
@@ -25,7 +25,7 @@ const Page = () => {
             <Heading as="h2" variant="page-title" >
               Victor Izbitskiy
             </Heading>
-            <p>Developer</p>
+            <p>Software engineer</p>
           </Box>
           <Box
             flexShrink={0}
@@ -51,8 +51,8 @@ const Page = () => {
             Work
           </Heading>
           <Paragraph>
-            Hi! I&apos;m a full-stack developer with a passion for building digital stuff I want.
-            I love to find elegant solutions to problems through code and create useful things.
+            I&apos;m a software engineer and I love creating digital things.
+            Also, I like to find elegant solutions to problems through code.
             When not online, I like to go for walks, play chess and exercise.
           </Paragraph>
           <Box align="center" my={4}>
@@ -75,7 +75,7 @@ const Page = () => {
           </Heading>
           <BioSection>
             <BioYear>1991</BioYear>
-            Born in Russia
+            I was born
           </BioSection>
           <BioSection>
             <BioYear>2014</BioYear>
@@ -83,7 +83,7 @@ const Page = () => {
           </BioSection>
           <BioSection>
             <BioYear>2017 to present</BioYear>
-            Worked as an ABAP developer
+            I Work as a software engineer
           </BioSection>
         </Section>
 
