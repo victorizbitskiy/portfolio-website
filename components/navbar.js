@@ -1,5 +1,6 @@
 import {
   Box,
+  Link,
   Container,
   Flex,
   Heading,
@@ -11,10 +12,12 @@ import {
   Stack,
   useColorModeValue
 } from "@chakra-ui/react"
-import Link from "next/link"
+import NextLink from 'next/link'
 import Logo from "./logo"
 import { HamburgerIcon } from "@chakra-ui/icons"
 import ThemeToggleButton from "./theme-toggle-button"
+import { IoLogoGithub } from 'react-icons/io5'
+import { forwardRef } from "react"
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href
@@ -22,12 +25,13 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
 
   return (
     <Link
+      as={NextLink}
       href={href}
-      p={2}
       scroll={false}
-      target={target}
-      bg={active ? 'grassTeal' : undefined}
+      p={2}
+      bg={active ? '#7f9eaa' : undefined}
       color={active ? '#202023' : inactiveColor}
+      target={target}
       {...props}
     >
       {children}
@@ -35,8 +39,12 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
   )
 }
 
+const MenuLink = forwardRef(function MenuLink(props, ref) {
+  return <Link ref={ref} as={NextLink} {...props} />
+})
+
 const Navbar = props => {
-  const path = { props }
+  const path = props.path
 
   return (
     <Box
@@ -45,7 +53,7 @@ const Navbar = props => {
       w="100%"
       bg={useColorModeValue('#ffffff40', '#20202380')}
       style={{ backdropFilter: 'blur(10px)' }}
-      zIndex={1}
+      zIndex={2}
       {...props}
     >
       <Container
@@ -72,9 +80,9 @@ const Navbar = props => {
           direction={{ base: 'column', md: 'row' }}
           display={{ base: 'none', md: 'flex' }}
           width={{ base: 'full', md: 'auto' }}
-          alignContent="center"
+          alignItems="center"
           flexGrow={1}
-          mt={{ base: 4, nmd: 0 }}
+          mt={{ base: 4, md: 0 }}
         >
           <LinkItem
             href="/works"
@@ -91,7 +99,7 @@ const Navbar = props => {
             style={{ gap: 4 }}
             pl={2}
           >
-
+            <IoLogoGithub />
             GitHub
           </LinkItem>
         </Stack>
@@ -99,7 +107,7 @@ const Navbar = props => {
         <Box flex={1} align="right">
           <ThemeToggleButton />
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
-            <Menu>
+            <Menu isLazy id="navbar-menu">
               <MenuButton
                 as={IconButton}
                 icon={<HamburgerIcon />}
@@ -107,13 +115,13 @@ const Navbar = props => {
                 aria-label="Options"
               />
               <MenuList>
-                <MenuItem as={Link} href="/">
+                <MenuItem as={<MenuLink />} href="/">
                   About
                 </MenuItem>
-                <MenuItem as={Link} href="/works">
+                <MenuItem as={<MenuLink />} href="/works">
                   Works
                 </MenuItem>
-                <MenuItem as={Link} href="/posts">
+                <MenuItem as={<MenuLink />} href="/posts">
                   Posts
                 </MenuItem>
               </MenuList>
