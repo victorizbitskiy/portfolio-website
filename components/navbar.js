@@ -16,7 +16,7 @@ import Logo from "./logo"
 import { HamburgerIcon } from "@chakra-ui/icons"
 import ThemeToggleButton from "./theme-toggle-button"
 
-const LinkItem = ({ href, path, target, children, ...props}) => {
+const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href
   const inactiveColor = useColorModeValue('gray.800', 'whiteAlpha.900')
 
@@ -76,11 +76,23 @@ const Navbar = props => {
           flexGrow={1}
           mt={{ base: 4, nmd: 0 }}
         >
-          <LinkItem href="/works" path={path} >
+          <LinkItem
+            href="/works"
+            path={path}
+          >
             Works
           </LinkItem>
-          <LinkItem href="/posts" path={path}>
-            Posts
+          <LinkItem
+            target="_blank"
+            href="https://github.com/victorizbitskiy"
+            path={path}
+            display="inline-flex"
+            alignItems="center"
+            style={{ gap: 4 }}
+            pl={2}
+          >
+
+            GitHub
           </LinkItem>
         </Stack>
 
