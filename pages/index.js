@@ -5,7 +5,6 @@ import NextLink from 'next/link'
 import { ChevronRightIcon } from "@chakra-ui/icons"
 import Layout from "../components/layouts/article"
 import { BioSection, BioYear } from "../components/bio"
-import { color } from "framer-motion"
 
 const Page = () => {
   return (
