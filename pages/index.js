@@ -1,10 +1,11 @@
-import { Box, Button, Container, Heading, Image, useColorModeValue } from "@chakra-ui/react"
+import { Box, Button, Container, Heading, Image, Link, List, ListItem, useColorModeValue } from "@chakra-ui/react"
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import NextLink from 'next/link'
 import { ChevronRightIcon } from "@chakra-ui/icons"
 import Layout from "../components/layouts/article"
 import { BioSection, BioYear } from "../components/bio"
+import { color } from "framer-motion"
 
 const Page = () => {
   return (
@@ -92,10 +93,32 @@ const Page = () => {
             I ♥
           </Heading>
           <Paragraph>
-            Chess, Art, Music, Drawing
+            <Link href="https://www.chess.com/member/victor_izbitskiy" target="_blank" >
+              Chess
+            </Link>
+            , Art, Music, Drawing
           </Paragraph>
         </Section>
 
+
+        <Section delay={0.3}>
+          <Heading as="h3" variant="section-title">
+            On the web
+          </Heading>
+          <List>
+            <ListItem>
+              <Link>
+                <Button
+                  variant="ghost"
+                  color='BendersColor'
+                >
+                  Telegram
+                </Button>
+              </Link>
+            </ListItem>
+          </List>
+        </Section>
+        
       </Container>
     </Layout>
   )
