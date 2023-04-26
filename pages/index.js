@@ -5,6 +5,7 @@ import NextLink from 'next/link'
 import { ChevronRightIcon } from "@chakra-ui/icons"
 import Layout from "../components/layouts/article"
 import { BioSection, BioYear } from "../components/bio"
+import { IoLogoLinkedin } from 'react-icons/io5'
 
 const Page = () => {
   return (
@@ -110,6 +111,18 @@ const Page = () => {
                 <Button
                   variant="ghost"
                   color='BendersColor'
+                  leftIcon={<IoLogoLinkedin />}
+                >
+                  Linkedin
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link>
+                <Button
+                  variant="ghost"
+                  color='BendersColor'
+                  leftIcon=""
                 >
                   Telegram
                 </Button>

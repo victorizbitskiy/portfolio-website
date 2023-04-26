@@ -14,12 +14,13 @@ const Works = () => {
           Works
         </Heading>
 
-        <SimpleGrid columns={[1, 1, 1]} gap={6}>
-          <Section>
+        <SimpleGrid columns={[1, 2, 1]} gap={6} justifyContent="center">
+          <Section >
             <WorkGridItem
               id="ccgtb"
               title="Clean Code Guides Telegram Bot"
               thumbnail={thumbCCGTB}
+
             >
               This is a Telegram bot that has been created to help you make your
               code cleaner. It provides an interface to work with adaptations of
