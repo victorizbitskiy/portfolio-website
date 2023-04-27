@@ -107,18 +107,19 @@ const Page = () => {
           </Heading>
           <List>
             <ListItem>
-              <Link>
+              <Link href="https://www.linkedin.com/in/000111/" target="_blank">
                 <Button
                   variant="ghost"
                   color='BendersColor'
                   leftIcon={<IoLogoLinkedin />}
+                  href
                 >
                   Linkedin
                 </Button>
               </Link>
             </ListItem>
             <ListItem>
-              <Link>
+              <Link href="https://t.me/nameci" target="_blank">
                 <Button
                   variant="ghost"
                   color='BendersColor'
