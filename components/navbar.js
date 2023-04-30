@@ -39,10 +39,6 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
   )
 }
 
-const MenuLink = forwardRef(function MenuLink(props, ref) {
-  return <Link ref={ref} as={NextLink} {...props} />
-})
-
 const Navbar = props => {
   const path = props.path
 
@@ -115,13 +111,13 @@ const Navbar = props => {
                 aria-label="Options"
               />
               <MenuList>
-                <MenuItem as={<MenuLink />} href="/">
+                <MenuItem as={NextLink} href="/">
                   About
                 </MenuItem>
-                <MenuItem as={<MenuLink />} href="/works">
+                <MenuItem as={NextLink} href="/works">
                   Works
                 </MenuItem>
-                <MenuItem as={<MenuLink />} href="/posts">
+                <MenuItem as={NextLink} href="/posts">
                   Posts
                 </MenuItem>
               </MenuList>
